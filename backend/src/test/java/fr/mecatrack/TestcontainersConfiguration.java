@@ -12,7 +12,7 @@ class TestcontainersConfiguration {
 	@Bean
 	@ServiceConnection
 	OracleContainer oracleFreeContainer() {
-		return new OracleContainer(DockerImageName.parse("gvenzl/oracle-free:latest"));
+		return new OracleContainer(DockerImageName.parse("gvenzl/oracle-free:23-slim-faststart"));
 	}
 
 }
