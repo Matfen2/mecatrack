@@ -1,5 +1,7 @@
 # MécaTrack
 
+![CI](https://github.com/Matfen2/mecatrack/actions/workflows/ci.yml/badge.svg)
+
 Application de suivi de maintenance industrielle : déclaration des pannes, planification des interventions et pilotage du parc d'équipements.
 
 **Stack :** Java 25 · Spring Boot · JPA/Hibernate · Oracle (PL/SQL) · Angular · Docker · Oracle Cloud
