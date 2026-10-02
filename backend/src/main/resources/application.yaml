@@ -17,3 +17,10 @@ management:
     web:
       exposure:
         include: health,info
+
+mecatrack:
+  securite:
+    jwt:
+      # Clé de développement uniquement. En production : variable JWT_SECRET.
+      secret: ${JWT_SECRET:Wczsrfme5cF7CgFV3smktUEWkf9rLnQdfX4MKuTctsE=}
+      duree: PT1H
