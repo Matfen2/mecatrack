@@ -12,15 +12,15 @@ spring:
   flyway:
     locations: classpath:db/migration
 
-springdoc:
-  swagger-ui:
-    url: /openapi.yaml
-
 management:
   endpoints:
     web:
       exposure:
         include: health,info
+
+springdoc:
+  swagger-ui:
+    url: /openapi.yaml
 
 mecatrack:
   securite:
