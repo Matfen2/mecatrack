@@ -92,6 +92,18 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>3.1.1</version>
 		</dependency>
+		<!-- Spring Security + support JWT (OAuth2 Resource Server) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security-oauth2-resource-server</artifactId>
+		</dependency>
+		
+		<!-- Outils de test de Spring Security (springSecurity() pour MockMvc) -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -141,6 +153,8 @@
 								<documentationProvider>none</documentationProvider>
 								<annotationLibrary>none</annotationLibrary>
 								<dateLibrary>java8</dateLibrary>
+								<!-- Préfixe /api/v1 (champ servers du contrat) porté par les interfaces générées -->
+								<requestMappingMode>api_interface</requestMappingMode>
 							</configOptions>
 						</configuration>
 					</execution>
