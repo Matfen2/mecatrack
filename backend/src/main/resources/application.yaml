@@ -12,6 +12,10 @@ spring:
   flyway:
     locations: classpath:db/migration
 
+springdoc:
+  swagger-ui:
+    url: /openapi.yaml
+
 management:
   endpoints:
     web:
@@ -24,3 +28,6 @@ mecatrack:
       # Clé de développement uniquement. En production : variable JWT_SECRET.
       secret: ${JWT_SECRET:Wczsrfme5cF7CgFV3smktUEWkf9rLnQdfX4MKuTctsE=}
       duree: PT1H
+  demo:
+    # Mot de passe commun aux comptes de démonstration (profil demo uniquement)
+    mot-de-passe: ${DEMO_PASSWORD:Demo2026!}
