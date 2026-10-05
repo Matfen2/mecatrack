@@ -101,11 +101,11 @@ public class Utilisateur {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Utilisateur autre)) return false;
-        return id != null && id.equals(autre.id);
+        return getId() != null && getId().equals(autre.getId());
     }
 
     @Override
     public int hashCode() {
-        return getClass().hashCode();
+        return Utilisateur.class.hashCode();
     }
 }
