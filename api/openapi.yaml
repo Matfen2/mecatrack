@@ -108,7 +108,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/Page'
         - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Sort'
+        - $ref: '#/components/parameters/SortEquipements'
         - name: statut
           in: query
           schema:
@@ -258,7 +258,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/Page'
         - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Sort'
+        - $ref: '#/components/parameters/SortInterventions'
         - name: statut
           in: query
           schema:
@@ -620,10 +620,17 @@ components:
         minimum: 1
         maximum: 100
         default: 20
-    Sort:
+    SortEquipements:
       name: sort
       in: query
-      description: Tri, au format champ,asc ou champ,desc
+      description: "Tri au format champ,asc ou champ,desc. Champs : reference, nom, dateMiseService, statut, zone, type"
+      schema:
+        type: string
+        example: reference,asc
+    SortInterventions:
+      name: sort
+      in: query
+      description: "Tri au format champ,asc ou champ,desc"
       schema:
         type: string
         example: dateDemande,desc
